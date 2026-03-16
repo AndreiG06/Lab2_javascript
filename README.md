@@ -447,5 +447,7 @@ Filter: let r = []; for(let i of a) if(cb(i)) r.push(i); return r; (отбира
 Find: for(let i of a) if(cb(i)) return i; (возвращает первый совпавший или undefined).
 
 Some: for(let i of a) if(cb(i)) return true; return false; (хотя бы один подошел).
+
 Every: for(let i of a) if(!cb(i)) return false; return true; (все должны подойти).
+
 Reduce: let acc = init; for(let i of a) acc = cb(acc, i); return acc; (сжимает всё в одно значение)
