@@ -420,6 +420,8 @@ console.log(sum);  // 15
 
 ---
 
+## Вопросы и ответы:
+
 **1. Преимущества колбэков**
 
 - **Читаемость** — пишешь _что_ сделать, а не _как_ перебирать: `filter(isAdult)` понятнее, чем цикл с условием внутри.
@@ -438,9 +440,9 @@ console.log(sum);  // 15
 
 **3. Реализация без встроенных методов**
 
-Map: let r = []; for(let i of a) r.push(cb(i)); return r;  (создает измененную копию).
-Filter: let r = []; for(let i of a) if(cb(i)) r.push(i); return r;  (отбирает по условию).
+Map: let r = []; for(let i of a) r.push(cb(i)); return r; (создает измененную копию).
+Filter: let r = []; for(let i of a) if(cb(i)) r.push(i); return r; (отбирает по условию).
 Find: for(let i of a) if(cb(i)) return i; (возвращает первый совпавший или undefined).
-Some: for(let i of a) if(cb(i)) return true; return false;  (хотя бы один подошел).
-Every: for(let i of a) if(!cb(i)) return false; return true;``` (все должны подойти).
-Reduce: let acc = init; for(let i of a) acc = cb(acc, i); return acc; ```(сжимает всё в одно значение)
+Some: for(let i of a) if(cb(i)) return true; return false; (хотя бы один подошел).
+Every: for(let i of a) if(!cb(i)) return false; return true; (все должны подойти).
+Reduce: let acc = init; for(let i of a) acc = cb(acc, i); return acc; (сжимает всё в одно значение)
