@@ -439,13 +439,9 @@ console.log(sum);  // 15
 **3. Реализация без встроенных методов**
 ```javascript
  Map: let r = []; for(let i of a) r.push(cb(i)); return r; ``` (создает измененную копию).
-```javascript
+
 Filter: let r = []; for(let i of a) if(cb(i)) r.push(i); return r;```  (отбирает по условию).
-```javascript
 Find: for(let i of a) if(cb(i)) return i; ``` (возвращает первый совпавший или undefined).
-```javascript
 Some: for(let i of a) if(cb(i)) return true; return false; ``` (хотя бы один подошел).
-```javascript
 Every: for(let i of a) if(!cb(i)) return false; return true;``` (все должны подойти).
-```javascript
 Reduce: let acc = init; for(let i of a) acc = cb(acc, i); return acc; ```(сжимает всё в одно значение)
